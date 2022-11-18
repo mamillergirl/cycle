@@ -112,7 +112,7 @@ namespace Unit05.Game.Casting
             {
                 //Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point position = new Point(x, y +  i * Constants.CELL_SIZE);
-                Point velocity = new Point(0, Constants.CELL_SIZE);
+                Point velocity = new Point(0, -Constants.CELL_SIZE);
                 string text = i == 0 ? "8" : "#";
                 Color color = i == 0 ? GetColor() : GetColor();
 

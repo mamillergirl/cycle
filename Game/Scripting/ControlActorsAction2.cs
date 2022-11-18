@@ -13,7 +13,7 @@ namespace Unit05.Game.Scripting
     public class ControlActorsAction2 : Action
     {
         private KeyboardService keyboardService;
-        private Point direction = new Point(0, Constants.CELL_SIZE);
+        private Point direction = new Point(0, -Constants.CELL_SIZE);
 
         /// <summary>
         /// Constructs a new instance of ControlActorsAction using the given KeyboardService.
@@ -31,35 +31,32 @@ namespace Unit05.Game.Scripting
             if (keyboardService.IsKeyDown("j"))
             {
                 direction = new Point(-Constants.CELL_SIZE, 0);
-                p2.GrowTail(1);
+        
             }
 
             // right
             if (keyboardService.IsKeyDown("l"))
             {
                 direction = new Point(Constants.CELL_SIZE, 0);
-                p2.GrowTail(1);
+               
             }
 
             // up
             if (keyboardService.IsKeyDown("i"))
             {
                 direction = new Point(0, -Constants.CELL_SIZE);
-                p2.GrowTail(1);
+                
             }
 
             // down
             if (keyboardService.IsKeyDown("k"))
             {
                 direction = new Point(0, Constants.CELL_SIZE);
-                p2.GrowTail(1);
+                
             }
 
-            
-           
-
             p2.TurnHead(direction);
-            //p2.GrowTail(1);
+    
 
         }
     }
