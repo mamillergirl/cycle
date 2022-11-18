@@ -26,34 +26,40 @@ namespace Unit05.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
+            Snake p2 = (Snake)cast.GetFirstActor("playerTwo");
             // left
             if (keyboardService.IsKeyDown("j"))
             {
                 direction = new Point(-Constants.CELL_SIZE, 0);
+                p2.GrowTail(1);
             }
 
             // right
             if (keyboardService.IsKeyDown("l"))
             {
                 direction = new Point(Constants.CELL_SIZE, 0);
+                p2.GrowTail(1);
             }
 
             // up
             if (keyboardService.IsKeyDown("i"))
             {
                 direction = new Point(0, -Constants.CELL_SIZE);
+                p2.GrowTail(1);
             }
 
             // down
             if (keyboardService.IsKeyDown("k"))
             {
                 direction = new Point(0, Constants.CELL_SIZE);
+                p2.GrowTail(1);
             }
 
             
-            Snake p2 = (Snake)cast.GetFirstActor("playerTwo");
+           
 
             p2.TurnHead(direction);
+            //p2.GrowTail(1);
 
         }
     }

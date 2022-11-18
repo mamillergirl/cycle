@@ -25,7 +25,7 @@ namespace Unit05
 
            
             cast.AddActor("playerOne", new Snake(Constants.RED, new System.Numerics.Vector2(Constants.CELL_SIZE * 4,Constants.CELL_SIZE* 4)));
-            cast.AddActor("playerTwo", new Snake(Constants.GREEN, new System.Numerics.Vector2(Constants.CELL_SIZE * 40,Constants.CELL_SIZE * 4)));
+            cast.AddActor("playerTwo", new Snake(Constants.GREEN, new System.Numerics.Vector2(0,-Constants.CELL_SIZE)));
             cast.AddActor("score", new Score());
 
             // create the services
