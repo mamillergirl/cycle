@@ -127,9 +127,11 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == true)
             {
-                Snake snake = (Snake)cast.GetFirstActor("snake");
-                List<Actor> segments = snake.GetSegments();
-                
+                Snake snake1 = (Snake)cast.GetFirstActor("playerOne");
+                List<Actor> segments1 = snake1.GetSegments();
+                Snake snake2 = (Snake)cast.GetFirstActor("playerOne");
+                List<Actor> segments2 = snake2.GetSegments();
+          
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;
@@ -142,13 +144,17 @@ namespace Unit05.Game.Scripting
                 cast.AddActor("messages", message);
 
                 // make everything white
-                foreach (Actor segment in segments)
+                foreach (Actor segment1 in segments1)
                 {
-                    segment.SetColor(Constants.WHITE);
+                    segment1.SetColor(Constants.WHITE);
                 }
-                
+                foreach (Actor segment2 in segments2)
+                {
+                    segment2.SetColor(Constants.WHITE);
+                }
             }
         }
 
     }
-}
+
+    }
