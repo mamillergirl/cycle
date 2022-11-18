@@ -129,7 +129,7 @@ namespace Unit05.Game.Scripting
             {
                 Snake snake1 = (Snake)cast.GetFirstActor("playerOne");
                 List<Actor> segments1 = snake1.GetSegments();
-                Snake snake2 = (Snake)cast.GetFirstActor("playerOne");
+                Snake snake2 = (Snake)cast.GetFirstActor("playerTwo");
                 List<Actor> segments2 = snake2.GetSegments();
           
 
