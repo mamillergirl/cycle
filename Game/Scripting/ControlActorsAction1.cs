@@ -31,28 +31,28 @@ namespace Unit05.Game.Scripting
             if (keyboardService.IsKeyDown("a"))
             {
                 direction = new Point(-Constants.CELL_SIZE, 0);
-                p1.GrowTail(1);
+               
             }
 
             // right
             if (keyboardService.IsKeyDown("d"))
             {
                 direction = new Point(Constants.CELL_SIZE, 0);
-                p1.GrowTail(1);
+              
             }
 
             // up
             if (keyboardService.IsKeyDown("w"))
             {
                 direction = new Point(0, -Constants.CELL_SIZE);
-                p1.GrowTail(1);
+                
             }
 
             // down
             if (keyboardService.IsKeyDown("s"))
             {
                 direction = new Point(0, Constants.CELL_SIZE);
-                p1.GrowTail(1);
+                
             }
 
             

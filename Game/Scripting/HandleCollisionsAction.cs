@@ -131,7 +131,8 @@ namespace Unit05.Game.Scripting
                 List<Actor> segments1 = snake1.GetSegments();
                 Snake snake2 = (Snake)cast.GetFirstActor("playerTwo");
                 List<Actor> segments2 = snake2.GetSegments();
-          
+                snake1.SetColor(Constants.WHITE);
+                snake2.SetColor(Constants.WHITE);
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;

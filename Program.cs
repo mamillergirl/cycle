@@ -26,7 +26,7 @@ namespace Unit05
            
             cast.AddActor("playerOne", new Snake(Constants.RED, new System.Numerics.Vector2(Constants.CELL_SIZE * 4,Constants.CELL_SIZE* 4)));
             cast.AddActor("playerTwo", new Snake(Constants.GREEN, new System.Numerics.Vector2(0,-Constants.CELL_SIZE)));
-            cast.AddActor("score", new Score());
+        
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
@@ -37,6 +37,7 @@ namespace Unit05
             script.AddAction("input", new ControlActorsAction1(keyboardService));
             script.AddAction("input", new ControlActorsAction2(keyboardService));
             script.AddAction("update", new MoveActorsAction());
+            script.AddAction("update", new MakeTrailAction());
             script.AddAction("update", new HandleCollisionsAction());
             script.AddAction("output", new DrawActorsAction(videoService));
 

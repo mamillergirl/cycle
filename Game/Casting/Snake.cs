@@ -69,6 +69,7 @@ namespace Unit05.Game.Casting
                 segment.SetText("#");
                 segment.SetColor(GetColor());
                 segments.Add(segment);
+                
             }
         }
 
